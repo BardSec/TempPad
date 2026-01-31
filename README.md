@@ -1,30 +1,34 @@
-# TempPad
-Temporary Notepad is a simple, fast notepad that lives right in your browser toolbar.
+# Temporary Notepad Chrome Extension
 
+A simple in-browser notepad that persists until you restart your browser.
 
-Temporary Notepad is a simple, fast notepad that lives right in your browser toolbar. Perfect for jotting down quick notes, drafting messages, or storing temporary information during your browsing session.
+## Features
 
-Key Features:
-• Quick access from your toolbar - one click away
-• Auto-saves as you type - never lose your notes
-• Live word count to track your writing
-• Dark mode for comfortable nighttime use
-• Export to .txt file with timestamps
-• Clean, distraction-free interface
-• Automatically clears on browser restart for privacy
+- 📝 Simple, clean notepad interface
+- 🔢 Live word count
+- 🌙 Dark mode toggle (preference persists across sessions)
+- 📥 Export to .txt file with timestamp
+- 💾 Auto-saves as you type
+- 🔄 Clears automatically on browser restart
 
-Perfect for:
-- Quick note-taking while browsing
-- Drafting emails or messages
-- Temporary clipboard storage
-- Jotting down ideas or reminders
-- Shopping lists and to-dos
-- Any text you need just for today
+## Installation
 
-Privacy First:
-All data is stored locally in your browser. Nothing is sent to external servers. Your notes automatically clear when you close Chrome, ensuring your temporary thoughts stay temporary.
+1. Open Chrome and go to `chrome://extensions/`
+2. Enable "Developer mode" (toggle in the top right)
+3. Click "Load unpacked"
+4. Select the folder containing these files
+5. The notepad icon should appear in your toolbar!
 
-Why Temporary Notepad?
-Sometimes you just need a place to write something down without the commitment of saving a file or opening a full app. Temporary Notepad is designed for exactly that - quick, temporary text storage that's always accessible and automatically cleans up after itself.
+## Usage
 
-No ads. No tracking. No accounts required. Just a simple notepad when you need it.
+- Click the extension icon to open the notepad
+- Start typing - your notes save automatically
+- Notes persist across tabs and sessions
+- Notes clear when you restart Chrome
+
+## Files Included
+
+- `manifest.json` - Extension configuration
+- `popup.html` - Notepad interface
+- `popup.js` - Save/load functionality
+- `icon16.png`, `icon48.png`, `icon128.png` - Extension icons
