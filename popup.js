@@ -2,12 +2,14 @@ const notepad = document.getElementById('notepad');
 const wordCountDisplay = document.getElementById('word-count');
 const darkModeBtn = document.getElementById('dark-mode-btn');
 const exportBtn = document.getElementById('export-btn');
+const copyBtn = document.getElementById('copy-btn');
 
-// Function to count words
+// Function to count words and characters
 function updateWordCount() {
   const text = notepad.value.trim();
   const words = text === '' ? 0 : text.split(/\s+/).length;
-  wordCountDisplay.textContent = `${words} word${words !== 1 ? 's' : ''}`;
+  const chars = notepad.value.length; // Count all characters including spaces
+  wordCountDisplay.textContent = `${words} word${words !== 1 ? 's' : ''} | ${chars} character${chars !== 1 ? 's' : ''}`;
 }
 
 // Load saved content and dark mode preference
@@ -57,4 +59,24 @@ exportBtn.addEventListener('click', () => {
   a.click();
   
   URL.revokeObjectURL(url);
+});
+
+// Copy to clipboard
+copyBtn.addEventListener('click', async () => {
+  const text = notepad.value;
+  try {
+    await navigator.clipboard.writeText(text);
+    // Visual feedback - temporarily change button text
+    const originalText = copyBtn.textContent;
+    copyBtn.textContent = 'Copied!';
+    setTimeout(() => {
+      copyBtn.textContent = originalText;
+    }, 1500);
+  } catch (err) {
+    console.error('Failed to copy text:', err);
+    copyBtn.textContent = 'Failed';
+    setTimeout(() => {
+      copyBtn.textContent = 'Copy';
+    }, 1500);
+  }
 });

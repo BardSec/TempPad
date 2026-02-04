@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "TempPad",
-  "version": "1.0",
-  "description": "A temporary in-browser notepad with word count, dark mode, and export. Persists until browser restart.",
+  "version": "1.2",
+  "description": "A temporary in-browser notepad with word/character count, copy to clipboard, dark mode, and export. Persists until browser restart.",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
